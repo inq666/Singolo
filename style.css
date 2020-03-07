@@ -176,6 +176,7 @@ p {
   line-height: 30px;
   color: #767e9e;
   letter-spacing: -0.0019rem;
+  text-align: justify;
 }
 
 .services-skills {
@@ -222,6 +223,7 @@ p {
 }
 
 .item-description {
+  max-width: 220px;
   max-height: 60px;
   overflow: hidden;
 
@@ -403,19 +405,19 @@ p {
 }
 
 .social-link-facebook {
-  background-image: url("assets/images/icon-social-networks/Facebook.png");
+  background-image: url("assets/images/icon/Facebook.png");
 }
 
 .social-link-google {
-  background-image: url("assets/images/icon-social-networks/Google.png");
+  background-image: url("assets/images/icon/Google.png");
 }
 
 .social-link-twitter {
-  background-image: url("assets/images/icon-social-networks/Twitter.png");
+  background-image: url("assets/images/icon/Twitter.png");
 }
 
 .social-link-linkedin {
-  background-image: url("assets/images/icon-social-networks/Linkedin.png");
+  background-image: url("assets/images/icon/Linkedin.png");
 }
 
 /*get a quote*/
@@ -609,8 +611,8 @@ input:last-child::placeholder {
 }
 
 .social-link > a:last-child {
-  margin-left: -1px;
   margin-right: 0;
+  margin-left: -1px;
 }
 
 .social-link > a:hover {
@@ -620,7 +622,7 @@ input:last-child::placeholder {
 }
 
 .social-link > a:active {
-  background-color: #34363e;
+  background-color: #42444b;
   transform: scale(1.2, 1.2);
 }
 
