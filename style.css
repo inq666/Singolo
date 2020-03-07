@@ -174,9 +174,9 @@ p {
   font-weight: 300;
   font-size: 18px;
   line-height: 30px;
+  text-align: justify;
   color: #767e9e;
   letter-spacing: -0.0019rem;
-  text-align: justify;
 }
 
 .services-skills {
@@ -529,14 +529,6 @@ input:last-child::placeholder {
   margin-top: 20px;
 }
 
-.contact {
-  position: relative;
-
-  display: block;
-  margin: 0;
-  margin-left: 24px;
-}
-
 .phone {
   margin-top: -1px;
 }
@@ -563,16 +555,27 @@ input:last-child::placeholder {
 }
 
 .comminication-link {
+  position: relative;
+
+  display: block;
+  margin: 0;
+  margin-left: 24px;
+
   color: inherit;
   text-decoration: none;
 
   transition: color 0.3s, text-decoration 0.3s linear;
 }
 
-.comminication-link:hover {
+.comminication-link:not(:first-child):hover {
   color: #a7a7a7;
   text-decoration: underline;
 }
+
+.comminication-link:not(:first-child):hover::before {
+  opacity: 0.5;
+}
+
 
 /*footer*/
 .footer {
