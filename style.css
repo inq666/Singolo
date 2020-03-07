@@ -198,16 +198,15 @@ p {
   margin-right: 0;
 }
 
-
 .icon-skill {
   margin-top: 4px;
   margin-right: 20px;
 }
+
 .services-skills-item:nth-child(1) .icon-skill,
 .services-skills-item:nth-child(4) .icon-skill {
   margin-left: 1px;
 }
-
 
 .item-title {
   margin-bottom: 8px;
@@ -399,6 +398,7 @@ p {
   border-radius: 50%;
   transform: scale(1.1, 1.1);
 }
+
 .social-networks > a:active {
   background-color: #cac9c9;
   transform: scale(1.2, 1.2);
@@ -575,7 +575,6 @@ input:last-child::placeholder {
 .comminication-link:not(:first-child):hover::before {
   opacity: 0.5;
 }
-
 
 /*footer*/
 .footer {
