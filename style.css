@@ -529,31 +529,6 @@ input:last-child::placeholder {
   margin-top: 20px;
 }
 
-.phone {
-  margin-top: -1px;
-}
-
-.location::before {
-  content: url("assets/images/icon/location.svg");
-  position: absolute;
-  bottom: -2px;
-  left: -20px;
-}
-
-.phone::before {
-  content: url("assets/images/icon/phone.svg");
-  position: absolute;
-  bottom: -2px;
-  left: -23px;
-}
-
-.email::before {
-  content: url("assets/images/icon/email.svg");
-  position: absolute;
-  bottom: -2px;
-  left: -23px;
-}
-
 .comminication-link {
   position: relative;
 
@@ -574,6 +549,31 @@ input:last-child::placeholder {
 
 .comminication-link:not(:first-child):hover::before {
   opacity: 0.5;
+}
+
+.phone {
+  margin-top: -1px;
+}
+
+.location::before {
+  content: url("assets/images/icon/location.svg");
+  position: absolute;
+  bottom: -2px;
+  left: -20px;
+}
+
+.phone::before {
+  content: url("assets/images/icon/phone.svg");
+  position: absolute;
+  bottom: -1px;
+  left: -23px;
+}
+
+.email::before {
+  content: url("assets/images/icon/email.svg");
+  position: absolute;
+  bottom: -2px;
+  left: -23px;
 }
 
 /*footer*/
