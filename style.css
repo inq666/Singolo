@@ -578,8 +578,8 @@ input:last-child::placeholder {
 
 /*footer*/
 .footer {
-  height: 76px;
   padding-top: 22px;
+  padding-bottom: 20px;
 
   background-color: #2d303a;
 }
@@ -595,10 +595,6 @@ input:last-child::placeholder {
 
   font-size: 12px;
   color: #666d89;
-}
-
-.social-link {
-  padding-bottom: 100px;
 }
 
 .social-link > a {
