@@ -13,18 +13,29 @@
 <body>
   <main>
 
+    <!--modal window-->
+    <div class="hidden-message" id="message-block">
+      <div class="message">
+        <p>Письмо отправлено</p>
+        <span id="subject-message"></span>
+        <span id="description-message"></span>
+      </div>
+      <button id="modal-btn">ОК</button>
+    </div>
+
     <!-- header -->
-    <header class="header">
+    <header class="header" id="home">
       <div class="container">
         <div class="header-inner">
           <h1 class="header-logo-title">Singolo<span class="title-element">*</span></h1>
           <nav class="header-navigation">
-            <a class="navigation-link" href="#">Home</a>
-            <a class="navigation-link" href="#">Services</a>
-            <a class="navigation-link" href="#">Portfolio</a>
-            <a class="navigation-link" href="#">About</a>
-            <a class="navigation-link" href="#">Contact</a>
+            <a class="navigation-link nav-active" href="#home" id="homeLink">Home</a>
+            <a class="navigation-link" href="#services" id="servicesLink">Services</a>
+            <a class="navigation-link" href="#portfolio" id="portfolioLink">Portfolio</a>
+            <a class="navigation-link" href="#about" id="aboutLink">About</a>
+            <a class="navigation-link" href="#contact" id="contactLink">Contact</a>
           </nav>
+
         </div>
       </div>
     </header>
@@ -33,20 +44,39 @@
     <section class="slider">
       <div class="container">
         <div class="slider-inner">
-          <div class="arrow-left"></div>
-          <div class="slider-phone">
-            <img class="phone-vertical" src="assets/images/Slider/Phone-Vertical.png" alt="phone-vertical" width="240"
-              height="483">
-            <img class="phone-horizontal" src="assets/images/Slider/Phone-Horizontal.png" alt="phone-horizontal"
-              width="484" height="240">
+          <div class="slider-switch">
+
+            <div class="slide-one slider-item">
+              <div class="display-disable-left"></div>
+              <div class="display-disable-right"></div>
+              <div class="display-disable-second"></div>
+              <div class="display-disable-left-add"></div>
+              <div class="display-disable-right-add"></div>
+              <div class="display-disable-second-add"></div>
+              <img class="phone-vertical" src="assets/images/Slider/Phone-Vertical.png" alt="phone-vertical" width="215"
+                height="458">
+              <img class="shadow-vertical" src="assets/images/Slider/shadow-vert.png" alt="shadow" width="240"
+                height="483">
+              <img class="phone-horizontal" src="assets/images/Slider/Phone-Horizontal.png" alt="phone-horizontal"
+                width="458" height="215">
+              <img class="shadow-horizontal" src="assets/images/Slider/shadow-horiz.png" alt="shadow" width="483"
+                height="240">
+            </div>
+
+            <div class="slide-second slider-item">
+              <img class="three-phones" src="assets/images/Slider/slide2.png" alt="three-phone" width="528"
+                height="525">
+            </div>
+
           </div>
+          <div class="arrow-left"></div>
           <div class="arrow-right"></div>
         </div>
       </div>
     </section>
 
     <!--services-->
-    <section class="services">
+    <section class="services" id="services">
       <div class="container">
         <h2 class="services-title">Our Services</h2>
         <p class="services-description"> Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis
@@ -118,52 +148,62 @@
 
 
     <!--portfolio-->
-    <section class="portfolio">
+    <section class="portfolio" id="portfolio">
       <div class="container">
         <h2 class="portfolio-title">Portfolio</h2>
         <p class="portfolio-description">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia
           odio sem nec elit.</p>
 
         <div class="portfolio-buttons">
-          <button class="btn">All</button>
-          <button class="btn">Web Design</button>
-          <button class="btn">Graphic Design</button>
-          <button class="btn">Artwork</button>
+          <button class="btn button-all active-button">All</button>
+          <button class="btn button-web-design">Web Design</button>
+          <button class="btn button-graphic-design">Graphic Design</button>
+          <button class="btn button-artwork">Artwork</button>
         </div>
         <div class="portfolio-images">
-          <img class="portfolio-image" src="assets/images/Portfolio/1.jpg" alt="portfolio-image-1" width="220"
-            height="187">
-          <img class="portfolio-image" src="assets/images/Portfolio/2.jpg" alt="portfolio-image-2" width="220"
-            height="187">
-          <img class="portfolio-image" src="assets/images/Portfolio/3.jpg" alt="portfolio-image-3" width="220"
-            height="187">
-          <img class="portfolio-image" src="assets/images/Portfolio/4.jpg" alt="portfolio-image-4" width="220"
-            height="187">
-          <img class="portfolio-image" src="assets/images/Portfolio/5.jpg" alt="portfolio-image-5" width="220"
-            height="187">
-          <img class="portfolio-image" src="assets/images/Portfolio/6.jpg" alt="portfolio-image-6" width="220"
-            height="187">
-          <img class="portfolio-image" src="assets/images/Portfolio/7.jpg" alt="portfolio-image-7" width="220"
-            height="187">
-          <img class="portfolio-image" src="assets/images/Portfolio/8.jpg" alt="portfolio-image-8" width="220"
-            height="187">
-          <img class="portfolio-image" src="assets/images/Portfolio/9.jpg" alt="portfolio-image-9" width="220"
-            height="187">
-          <img class="portfolio-image" src="assets/images/Portfolio/10.jpg" alt="portfolio-image-10" width="220"
-            height="187">
-          <img class="portfolio-image" src="assets/images/Portfolio/11.jpg" alt="portfolio-image-11" width="220"
-            height="187">
-          <img class="portfolio-image" src="assets/images/Portfolio/12.jpg" alt="portfolio-image-12" width="220"
-            height="187">
-          <img class="portfolio-image" src="assets/images/Portfolio/12.jpg" alt="portfolio-image-12" width="220"
-            height="187">
+          <div class="portfolio-image-item">
+            <img src="assets/images/Portfolio/1.jpg" alt="portfolio-image-1" width="220" height="187">
+          </div>
+          <div class="portfolio-image-item">
+            <img src="assets/images/Portfolio/2.jpg" alt="portfolio-image-2" width="220" height="187">
+          </div>
+          <div class="portfolio-image-item">
+            <img src="assets/images/Portfolio/3.jpg" alt="portfolio-image-3" width="220" height="187">
+          </div>
+          <div class="portfolio-image-item">
+            <img src="assets/images/Portfolio/4.jpg" alt="portfolio-image-4" width="220" height="187">
+          </div>
+          <div class="portfolio-image-item">
+            <img src="assets/images/Portfolio/5.jpg" alt="portfolio-image-5" width="220" height="187">
+          </div>
+          <div class="portfolio-image-item">
+            <img src="assets/images/Portfolio/6.jpg" alt="portfolio-image-6" width="220" height="187">
+          </div>
+          <div class="portfolio-image-item">
+            <img src="assets/images/Portfolio/7.jpg" alt="portfolio-image-7" width="220" height="187">
+          </div>
+          <div class="portfolio-image-item">
+            <img src="assets/images/Portfolio/8.jpg" alt="portfolio-image-8" width="220" height="187">
+          </div>
+          <div class="portfolio-image-item">
+            <img src="assets/images/Portfolio/9.jpg" alt="portfolio-image-9" width="220" height="187">
+          </div>
+          <div class="portfolio-image-item">
+            <img src="assets/images/Portfolio/10.jpg" alt="portfolio-image-10" width="220" height="187">
+          </div>
+          <div class="portfolio-image-item">
+            <img src="assets/images/Portfolio/11.jpg" alt="portfolio-image-11" width="220" height="187">
+          </div>
+          <div class="portfolio-image-item">
+            <img src="assets/images/Portfolio/12.jpg" alt="portfolio-image-12" width="220" height="187">
+          </div>
         </div>
       </div>
     </section>
 
 
     <!--about us-->
-    <section class="about-us">
+    <section class="about-us" id="about">
       <div class="container">
         <h2 class="about-us-title">About Us</h2>
         <p class="about-us-description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis,
@@ -217,20 +257,21 @@
     </section>
 
     <!--get a quote-->
-    <section class="contacts">
+    <section class="contacts" id="contact">
       <div class="container">
+
         <h2 class="contacts-title">Get a Quote</h2>
         <p class="contacts-description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis,
           non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac
           cursus
           commodo, tortor mauris condimentum nibh</p>
         <div class="wrapper">
-          <form action="#" method="get">
-            <input type="text" name="contact-name" placeholder="Name (Required)" minlength="1" required>
-            <input type="email" name="contact-email" placeholder="Email (Required)" required>
-            <input type="text" name="subject" placeholder="Subject">
+          <form action="#" method="get" id="form">
+            <input type="text" name="contact-name" placeholder="Name (Required)" required id="contact-name">
+            <input type="email" name="contact-email" placeholder="Email (Required)" required id="contact-email">
+            <input type="text" name="subject" placeholder="Subject" id="subject">
             <textarea name="description" cols="30" rows="12"
-              placeholder="Describe your project in detail..."></textarea>
+              placeholder="Describe your project in detail..." id="description"></textarea>
             <input class="contacts-button" type="submit" value="Submit">
           </form>
           <div class="contact-information">
@@ -267,6 +308,9 @@
       </div>
     </footer>
   </main>
+
+  <script src="script.js"></script>
+
 </body>
 
 </html>
