@@ -229,7 +229,7 @@ p {
   z-index: -999;
 }
 
-.display-disable-left {
+.display-left {
   position: absolute;
   top: 64px;
   left: 85px;
@@ -241,10 +241,10 @@ p {
   border-radius: 3px;
   opacity: 0;
 
-  transition: opacity 0.6s ease;
+  transition: opacity 1s ease;
 }
 
-.display-disable-right {
+.display-right {
   position: absolute;
   top: 134px;
   left: 444px;
@@ -256,10 +256,10 @@ p {
   border-radius: 3px;
   opacity: 0;
 
-  transition: opacity 0.6s ease;
+  transition: opacity 1s ease;
 }
 
-.display-disable-second {
+.display-second {
   position: absolute;
   top: 70px;
   left: 1295px;
@@ -272,54 +272,7 @@ p {
   border-radius: 3px;
   opacity: 0;
 
-  transition: opacity 0.6s ease;
-}
-
-.display-disable-left-add {
-  position: absolute;
-  top: 64px;
-  left: 1965px;
-  z-index: 999;
-
-  width: 189px;
-  height: 335px;
-
-  background-color: rgb(0, 0, 0);
-  border-radius: 3px;
-  opacity: 0;
-
-  transition: opacity 0.6s ease;
-}
-
-.display-disable-right-add {
-  position: absolute;
-  top: 134px;
-  left: 2324px;
-  z-index: 999;
-
-  width: 335px;
-  height: 190px;
-
-  background-color: rgb(0, 0, 0);
-  border-radius: 3px;
-  opacity: 0;
-
-  transition: opacity 0.6s ease;
-}
-
-.display-disable-second-add {
-  position: absolute;
-  top: 70px;
-  left: -585px;
-
-  width: 202px;
-  height: 363px;
-
-  background-color: rgb(0, 0, 0);
-  border-radius: 3px;
-  opacity: 0;
-
-  transition: opacity 0.6s ease;
+  transition: opacity 1s ease;
 }
 
 /* services*/

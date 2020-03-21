@@ -22,7 +22,7 @@ function activeLinkScroll() {
         if (item.getAttribute('id') === link.getAttribute('href').substring(1)) {
           link.classList.add('nav-active');
         }
-        if (scroll + 220 >= document.getElementById('contact').offsetTop) {
+        if (scroll + 400 >= document.getElementById('contact').offsetTop) {
           link.classList.remove('nav-active');
           document.getElementById('contactLink').classList.add('nav-active')
         }
@@ -73,6 +73,7 @@ function transformItem(direction) {
     SLIDERCONTAINER.style.background = '#f06c64';
     SLIDERCONTAINER.style.borderColor = '#ea676b'; // красный
   }
+  document.querySelectorAll('.disable').forEach(item => item.style.opacity = 0);
 }
 
 SLIDER.addEventListener('transitionend', () => {
@@ -93,12 +94,9 @@ SLIDER.addEventListener('transitionend', () => {
 
 
 // Выключение телефонов
-const disableLeft = document.querySelector('.display-disable-left');
-const disableRight = document.querySelector('.display-disable-right');
-const disableSecond = document.querySelector('.display-disable-second');
-const disableLeftAdd = document.querySelector('.display-disable-left-add');
-const disableRightAdd = document.querySelector('.display-disable-right-add');
-const disableSecondAdd = document.querySelector('.display-disable-second-add');
+const disableLeft = document.querySelector('.display-left');
+const disableRight = document.querySelector('.display-right');
+const disableSecond = document.querySelector('.display-second');
 const phoneLeft = document.querySelector('.phone-vertical');
 const phoneRight = document.querySelector('.phone-horizontal');
 const phoneSecond = document.querySelector('.three-phones');
@@ -107,26 +105,20 @@ SLIDER.addEventListener('click', (event) => {
   if (event.target == disableLeft || event.target == phoneLeft) {
     if (getComputedStyle(disableLeft).opacity == 0) {
       disableLeft.style.opacity = 1;
-      disableLeftAdd.style.opacity = 1;
     } else {
       disableLeft.style.opacity = 0;
-      disableLeftAdd.style.opacity = 0;
     }
   } else if (event.target == disableRight || event.target == phoneRight) {
     if (getComputedStyle(disableRight).opacity == 0) {
       disableRight.style.opacity = 1;
-      disableRightAdd.style.opacity = 1;
     } else {
       disableRight.style.opacity = 0;
-      disableRightAdd.style.opacity = 0;
     }
   } else if (event.target == disableSecond || event.target == phoneSecond) {
     if (getComputedStyle(disableSecond).opacity == 0) {
       disableSecond.style.opacity = 1;
-      disableSecondAdd.style.opacity = 1;
     } else {
       disableSecond.style.opacity = 0;
-      disableSecondAdd.style.opacity = 0;
     }
   }
 });
