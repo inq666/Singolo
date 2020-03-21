@@ -172,17 +172,18 @@ const MESSAGE = document.getElementById('message-block')
 const SUBJECT = document.getElementById('subject')
 const DESCRIPTION = document.getElementById('description')
 
+
 document.getElementById('form').onsubmit = function () {
   if (SUBJECT.value) {
-    document.getElementById('subject-message').innerHTML = '<b>Тема: </b>' + SUBJECT.value
+    document.getElementById('subject-message').textContent  = 'Тема: ' + SUBJECT.value
   } else {
-    document.getElementById('subject-message').innerHTML = 'Без темы'
+    document.getElementById('subject-message').textContent = 'Без темы'
   }
 
   if (DESCRIPTION.value) {
-    document.getElementById('description-message').innerHTML = '<b>Описание: </b>' + DESCRIPTION.value
+    document.getElementById('description-message').textContent  = 'Описание: ' + DESCRIPTION.value
   } else {
-    document.getElementById('description-message').innerHTML = 'Без описания'
+    document.getElementById('description-message').textContent = 'Без описания'
   }
   MESSAGE.classList.remove('hidden-message');
   document.getElementById('form').reset();
