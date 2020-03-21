@@ -32,8 +32,6 @@ p {
 
 /*header*/
 .header {
-  max-height: 50%;
-
   background-color: #2d303a;
   border-bottom: 6px solid #323746;
 }
@@ -793,7 +791,7 @@ input:last-child::placeholder {
 
 #modal-btn {
   position: absolute;
-  top: 50%;
+  top: 55%;
   left: 49%;
 
   padding: 5px 20px;
@@ -823,13 +821,13 @@ input:last-child::placeholder {
 
 .message {
   position: absolute;
-  top: 35%;
-  left: 40%;
+  top: 17%;
+  left: 37%;
 
   display: flex;
   flex-direction: column;
-  width: 400px;
-  height: 200px;
+  width: 500px;
+  height: 400px;
   padding: 10px;
 
   font-size: 15px;
@@ -844,20 +842,10 @@ input:last-child::placeholder {
   font-weight: 700;
   font-size: 17px;
   text-align: center;
+  margin-bottom: 25px;
 }
 
 #subject-message {
-  max-height: 40px;
-  margin-bottom: 7px;
-  padding-bottom: 5px;
-  overflow: hidden;
-
-  word-wrap: break-word;
-
-  border-bottom: 2px solid rgba(158, 158, 158, 0.253);
-}
-
-#description-message {
   max-height: 60px;
   margin-bottom: 7px;
   padding-bottom: 5px;
@@ -868,7 +856,16 @@ input:last-child::placeholder {
   border-bottom: 2px solid rgba(158, 158, 158, 0.253);
 }
 
+#description-message {
+  max-height: 240px;
+  margin-bottom: 7px;
+  padding-bottom: 5px;
+  overflow: hidden;
 
+  word-wrap: break-word;
+
+  border-bottom: 2px solid rgba(158, 158, 158, 0.253);
+}
 
 
 /*footer*/

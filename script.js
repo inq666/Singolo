@@ -1,18 +1,7 @@
-/* let activeLink = document.querySelector('.nav-active');  // активная ссылка
-// Подсветка ссылки при нажатии
-document.querySelector('.header-navigation').addEventListener('click', event => {
-  target = event.target;
-  if (!target.matches('a')) {
-    return;
-  } else if (activeLink) {
-    activeLink.classList.remove('nav-active');
-  }
-  activeLink = target;
-  activeLink.classList.add('nav-active');
-}); */
-
-
 // HEADER
+const SECTION = document.querySelectorAll('.section')
+const LINKS = document.querySelectorAll('.header-navigation a');
+
 window.addEventListener('scroll', showNavigation);        // Выпадающее меню при скролле
 window.addEventListener('scroll', activeLinkScroll);      // Подсветка ссылок при скролле
 
@@ -23,59 +12,23 @@ function showNavigation() {
     document.querySelector('.header-navigation').classList.remove('navigation-fixed')
   }
 };
-let activeLink = document.querySelector('.nav-active');   // Текущая подсвеченная ссылка
 
 function activeLinkScroll() {
-  if (pageYOffset >= 0 && pageYOffset < 692) {
-    lightLink = document.getElementById('homeLink');
-    if (lightLink.classList.contains('nav-active')) {
-      return;
-    } else {
-      checkClass()
+  let scroll = window.pageYOffset;
+  SECTION.forEach(item => {
+    if (scroll >= item.offsetTop) {
+      LINKS.forEach(link => {
+        link.classList.remove('nav-active');
+        if (item.getAttribute('id') === link.getAttribute('href').substring(1)) {
+          link.classList.add('nav-active');
+        }
+        if (scroll + 220 >= document.getElementById('contact').offsetTop) {
+          link.classList.remove('nav-active');
+          document.getElementById('contactLink').classList.add('nav-active')
+        }
+      })
     }
-  }
-
-  if (pageYOffset > 693 && pageYOffset < 1192) {
-    lightLink = document.getElementById('servicesLink');
-    if (lightLink.classList.contains('nav-active')) {
-      return;
-    } else {
-      checkClass()
-    }
-  }
-
-  if (pageYOffset > 1193 && pageYOffset < 2060) {
-    lightLink = document.getElementById('portfolioLink');
-    if (lightLink.classList.contains('nav-active')) {
-      return;
-    } else {
-      checkClass()
-    }
-  }
-
-  if (pageYOffset > 2061 && pageYOffset < 2579) {
-    lightLink = document.getElementById('aboutLink');
-    if (lightLink.classList.contains('nav-active')) {
-      return;
-    } else {
-      checkClass()
-    }
-  }
-
-  if (pageYOffset > 2580) {
-    lightLink = document.getElementById('contactLink')
-    if (lightLink.classList.contains('nav-active')) {
-      return;
-    } else {
-      checkClass()
-    }
-  }
-
-  function checkClass() {                      // Удаляет подсветку с прошлой ссылки и добавляет на новую
-    activeLink.classList.remove('nav-active');
-    lightLink.classList.add('nav-active');
-    activeLink = lightLink;
-  }
+  })
 };
 
 // SLIDERS
