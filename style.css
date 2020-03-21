@@ -430,6 +430,7 @@ p {
   margin-bottom: 20px;
 
   transition: border 0.3s ease;
+  line-height: 0;
 }
 
 .portfolio-image-item:nth-child(4),
