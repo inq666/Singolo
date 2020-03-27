@@ -11,7 +11,7 @@
 </head>
 
 <body>
-  <main>
+  <main class="section"  id="home">
 
     <!--modal window-->
     <div class="hidden-message" id="message-block">
@@ -24,32 +24,35 @@
     </div>
 
     <!-- header -->
-    <header class="header section" id="home">
-      <div class="container">
-        <div class="header-inner">
-          <h1 class="header-logo-title">Singolo<span class="title-element">*</span></h1>
-          <nav class="header-navigation">
-            <a class="navigation-link nav-active" href="#home">Home</a>
-            <a class="navigation-link" href="#services">Services</a>
-            <a class="navigation-link" href="#portfolio">Portfolio</a>
-            <a class="navigation-link" href="#about">About</a>
-            <a class="navigation-link" href="#contact" id="contactLink">Contact</a>
-          </nav>
-
-        </div>
+    <header class="header">
+        <div class="header-wrapper wrapper">
+            <div class="hamburger">
+              <span class="hamburger-line"></span>
+              <span class="hamburger-line"></span>
+              <span class="hamburger-line"></span>
+            </div>
+            <h1 class="header-logo-title">Singolo<span class="title-element">*</span></h1>
+            <nav class="header-navigation" data-mode="false">
+              <a class="navigation-link nav-active" href="#home">Home</a>
+              <a class="navigation-link" href="#services">Services</a>
+              <a class="navigation-link" href="#portfolio">Portfolio</a>
+              <a class="navigation-link" href="#about">About</a>
+              <a class="navigation-link" href="#contact" id="contactLink">Contact</a>
+            </nav>
+            <div class="blackout"></div>
       </div>
     </header>
 
     <!--mobile and slides-->
     <section class="slider">
-      <div class="container">
+      <div class="wrapper slider-wrapper">
         <div class="slider-inner">
           <div class="slider-switch">
 
             <div class="slide-one slider-item">
-              <div class="display-left disable"></div>
-              <div class="display-right disable"></div>
-              <div class="display-second disable"></div>
+              <div class="display-left"></div>
+              <div class="display-right"></div>
+              <div class="display-second"></div>
               <img class="phone-vertical" src="assets/images/Slider/Phone-Vertical.png" alt="phone-vertical" width="215"
                 height="458">
               <img class="shadow-vertical" src="assets/images/Slider/shadow-vert.png" alt="shadow" width="240"
@@ -63,6 +66,7 @@
             <div class="slide-second slider-item">
               <img class="three-phones" src="assets/images/Slider/slide2.png" alt="three-phone" width="528"
                 height="525">
+
             </div>
 
           </div>
@@ -74,7 +78,7 @@
 
     <!--services-->
     <section class="services section" id="services">
-      <div class="container">
+      <div class="wrapper services-wrapper">
         <h2 class="services-title">Our Services</h2>
         <p class="services-description"> Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis
           mollis,
@@ -146,7 +150,7 @@
 
     <!--portfolio-->
     <section class="portfolio section" id="portfolio">
-      <div class="container">
+      <div class="wrapper portfolio-wrapper">
         <h2 class="portfolio-title">Portfolio</h2>
         <p class="portfolio-description">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia
           odio sem nec elit.</p>
@@ -201,7 +205,7 @@
 
     <!--about us-->
     <section class="about-us section" id="about">
-      <div class="container">
+      <div class="wrapper">
         <h2 class="about-us-title">About Us</h2>
         <p class="about-us-description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis,
           non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac
@@ -255,21 +259,22 @@
 
     <!--get a quote-->
     <section class="contacts section" id="contact">
-      <div class="container">
+      <div class="wrapper">
 
         <h2 class="contacts-title">Get a Quote</h2>
         <p class="contacts-description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis,
           non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac
           cursus
           commodo, tortor mauris condimentum nibh</p>
-        <div class="wrapper">
+        <div class="contacts-wrapper">
           <form action="#" method="get" id="form">
-            <input type="text" name="contact-name" placeholder="Name (Required)" required pattern="^[[А-Яа-яЁё-a-zA-Z\s]+$">
+            <input type="text" name="contact-name" placeholder="Name (Required)" required
+              pattern="^[[А-Яа-яЁё-a-zA-Z\s]+$">
             <input type="email" name="contact-email" placeholder="Email (Required)" required>
             <input type="text" name="subject" placeholder="Subject" id="subject">
             <textarea name="description" cols="30" rows="12" placeholder="Describe your project in detail..."
               id="description"></textarea>
-            <input class="contacts-button" type="submit" value="Submit">
+            <input class="contacts-button" type="submit" value="SEND">
           </form>
           <div class="contact-information">
             <h2 class="contact-information-title">
@@ -292,7 +297,7 @@
 
     <!--footer-->
     <footer class="footer">
-      <div class="container">
+      <div class="wrapper">
         <div class="footer-content">
           <p class="copyright"> &#169; Copyright 2013</p>
           <div class="social-link">

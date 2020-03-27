@@ -2,14 +2,15 @@
 const SECTION = document.querySelectorAll('.section')
 const LINKS = document.querySelectorAll('.header-navigation a');
 
-window.addEventListener('scroll', showNavigation);        // Выпадающее меню при скролле
+window.addEventListener('scroll', showHeader);
 window.addEventListener('scroll', activeLinkScroll);      // Подсветка ссылок при скролле
 
-function showNavigation() {
-  if (window.pageYOffset > 50) {
-    document.querySelector('.header-navigation').classList.add('navigation-fixed');
+function showHeader() {
+  if (window.pageYOffset > 100) {
+    document.querySelector('.header').classList.add('header-fixed');
   } else {
-    document.querySelector('.header-navigation').classList.remove('navigation-fixed')
+    document.querySelector('.header').classList.remove('header-fixed')
+
   }
 };
 
@@ -157,13 +158,17 @@ function randomImages(arrayImages) {
 }
 
 // Подсветка при нажатии
+let target;
 CONTAINERIMAGES.addEventListener('click', (event) => {
-  if (!event.target.classList.contains('portfolio-image-item')) {
+  if (event.target.tagName == 'IMG' || event.target.classList.contains('portfolio-image-item')) {
+    if (target) {
+      target.classList.remove('portfolio-image-active');
+    }
+    target = event.target;
+    target.classList.add('portfolio-image-active');
+  } else {
     return;
   }
-  IMAGES.forEach(item => item.classList.remove('portfolio-image-active'));
-  event.target.classList.add('portfolio-image-active');
-
 })
 
 
@@ -175,13 +180,13 @@ const DESCRIPTION = document.getElementById('description')
 
 document.getElementById('form').onsubmit = function () {
   if (SUBJECT.value) {
-    document.getElementById('subject-message').textContent  = 'Тема: ' + SUBJECT.value
+    document.getElementById('subject-message').textContent = 'Тема: ' + SUBJECT.value
   } else {
     document.getElementById('subject-message').textContent = 'Без темы'
   }
 
   if (DESCRIPTION.value) {
-    document.getElementById('description-message').textContent  = 'Описание: ' + DESCRIPTION.value
+    document.getElementById('description-message').textContent = 'Описание: ' + DESCRIPTION.value
   } else {
     document.getElementById('description-message').textContent = 'Без описания'
   }
@@ -193,3 +198,33 @@ document.getElementById('form').onsubmit = function () {
 document.getElementById('modal-btn').addEventListener('click', () => {
   MESSAGE.classList.add('hidden-message');
 })
+
+
+//Выпадающее меню
+const HAMBURGER = document.querySelector('.hamburger');
+const NAVIGATION = document.querySelector('.header-navigation');
+const BLACKOUT = document.querySelector('.blackout');
+
+HAMBURGER.addEventListener('click', () => {
+  if (NAVIGATION.dataset.mode == 'false') {
+    HAMBURGER.style.transform = 'rotate(90deg)';
+    NAVIGATION.style.transform = 'translateX(0)';
+    NAVIGATION.dataset.mode = 'true';
+    BLACKOUT.style.display = 'block';
+    document.querySelector('.header-logo-title').classList.add('title-menu');
+    return;
+  }
+  if (NAVIGATION.dataset.mode == 'true') {
+    closeMenu();
+  }
+});
+
+BLACKOUT.addEventListener('click', closeMenu);
+
+function closeMenu(params) {
+  HAMBURGER.style.transform = 'rotate(0deg)';
+  NAVIGATION.style.transform = 'translateX(-100%)';
+  NAVIGATION.dataset.mode = 'false';
+  BLACKOUT.style.display = 'none';
+  document.querySelector('.header-logo-title').classList.remove('title-menu');
+}
