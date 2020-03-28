@@ -1,15 +1,16 @@
 // HEADER
 const SECTION = document.querySelectorAll('.section')
 const LINKS = document.querySelectorAll('.header-navigation a');
+const HEADER = document.querySelector('.header');
 
 window.addEventListener('scroll', showHeader);
 window.addEventListener('scroll', activeLinkScroll);      // Подсветка ссылок при скролле
 
 function showHeader() {
   if (window.pageYOffset > 100) {
-    document.querySelector('.header').classList.add('header-fixed');
+    HEADER.classList.add('header-fixed');
   } else {
-    document.querySelector('.header').classList.remove('header-fixed')
+    HEADER.classList.remove('header-fixed')
 
   }
 };
@@ -17,7 +18,7 @@ function showHeader() {
 function activeLinkScroll() {
   let scroll = window.pageYOffset;
   SECTION.forEach(item => {
-    if (scroll >= item.offsetTop) {
+    if (scroll + 10 >= item.offsetTop) {
       LINKS.forEach(link => {
         link.classList.remove('nav-active');
         if (item.getAttribute('id') === link.getAttribute('href').substring(1)) {
@@ -191,12 +192,12 @@ document.getElementById('form').onsubmit = function () {
     document.getElementById('description-message').textContent = 'Без описания'
   }
   MESSAGE.classList.remove('hidden-message');
-  document.getElementById('form').reset();
   return false;
 }
 
 document.getElementById('modal-btn').addEventListener('click', () => {
   MESSAGE.classList.add('hidden-message');
+  document.getElementById('form').reset();
 })
 
 
@@ -208,7 +209,7 @@ const BLACKOUT = document.querySelector('.blackout');
 HAMBURGER.addEventListener('click', () => {
   if (NAVIGATION.dataset.mode == 'false') {
     HAMBURGER.style.transform = 'rotate(90deg)';
-    NAVIGATION.style.transform = 'translateX(0)';
+    NAVIGATION.style.transform = 'translateY(0)';
     NAVIGATION.dataset.mode = 'true';
     BLACKOUT.style.display = 'block';
     document.querySelector('.header-logo-title').classList.add('title-menu');
@@ -220,10 +221,15 @@ HAMBURGER.addEventListener('click', () => {
 });
 
 BLACKOUT.addEventListener('click', closeMenu);
+NAVIGATION.addEventListener('click', (e) => {
+ if(e.target.tagName == 'A') {
+   closeMenu();
+ }
+});
 
 function closeMenu(params) {
   HAMBURGER.style.transform = 'rotate(0deg)';
-  NAVIGATION.style.transform = 'translateX(-100%)';
+  NAVIGATION.style.transform = 'translateY(-100%)';
   NAVIGATION.dataset.mode = 'false';
   BLACKOUT.style.display = 'none';
   document.querySelector('.header-logo-title').classList.remove('title-menu');

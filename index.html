@@ -19,8 +19,9 @@
         <p>Письмо отправлено</p>
         <span id="subject-message"></span>
         <span id="description-message"></span>
+        <button id="modal-btn">ОК</button>
       </div>
-      <button id="modal-btn">ОК</button>
+
     </div>
 
     <!-- header -->
@@ -50,10 +51,10 @@
           <div class="slider-switch">
 
             <div class="slide-one slider-item">
-              <div class="display-left"></div>
-              <div class="display-right"></div>
-              <div class="display-second"></div>
-              <img class="phone-vertical" src="assets/images/Slider/Phone-Vertical.png" alt="phone-vertical" width="215"
+              <div class="display-left disable"></div>
+              <div class="display-right disable"></div>
+              <div class="display-second disable"></div>
+              <img class="phone-vertical" src="assets/images/Slider/Phone-Vertical.png" alt="phone-vertical" width="216"
                 height="458">
               <img class="shadow-vertical" src="assets/images/Slider/shadow-vert.png" alt="shadow" width="240"
                 height="483">
@@ -205,7 +206,7 @@
 
     <!--about us-->
     <section class="about-us section" id="about">
-      <div class="wrapper">
+      <div class="wrapper about-wrapper">
         <h2 class="about-us-title">About Us</h2>
         <p class="about-us-description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis,
           non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac
@@ -259,7 +260,7 @@
 
     <!--get a quote-->
     <section class="contacts section" id="contact">
-      <div class="wrapper">
+      <div class="wrapper get-quote-wrraper">
 
         <h2 class="contacts-title">Get a Quote</h2>
         <p class="contacts-description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis,
@@ -268,9 +269,9 @@
           commodo, tortor mauris condimentum nibh</p>
         <div class="contacts-wrapper">
           <form action="#" method="get" id="form">
-            <input type="text" name="contact-name" placeholder="Name (Required)" required
+            <input type="text" name="contact-name" placeholder="Name (required)" required
               pattern="^[[А-Яа-яЁё-a-zA-Z\s]+$">
-            <input type="email" name="contact-email" placeholder="Email (Required)" required>
+            <input type="email" name="contact-email" placeholder="Email (required)" required>
             <input type="text" name="subject" placeholder="Subject" id="subject">
             <textarea name="description" cols="30" rows="12" placeholder="Describe your project in detail..."
               id="description"></textarea>
