@@ -223,13 +223,14 @@ HAMBURGER.addEventListener('click', () => {
 BLACKOUT.addEventListener('click', closeMenu);
 NAVIGATION.addEventListener('click', (e) => {
  if(e.target.tagName == 'A') {
+  if (NAVIGATION.dataset.mode == 'true')
    closeMenu();
  }
 });
 
 function closeMenu(params) {
   HAMBURGER.style.transform = 'rotate(0deg)';
-  NAVIGATION.style.transform = 'translateY(-100%)';
+  NAVIGATION.style.transform = 'translateY(-120%)';
   NAVIGATION.dataset.mode = 'false';
   BLACKOUT.style.display = 'none';
   document.querySelector('.header-logo-title').classList.remove('title-menu');

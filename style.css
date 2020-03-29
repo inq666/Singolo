@@ -242,7 +242,7 @@ p {
   z-index: 9999;
 
   width: 20%;
-  height: 63.2%;
+  height: 63.4%;
 
   background-color: rgb(0, 0, 0);
   border-radius: 3px;
@@ -269,12 +269,12 @@ p {
 
 .display-second {
   position: absolute;
-  top: 13.5%;
-  left: 138.8%;
+  top: 13.2%;
+  left: 138.5%;
   z-index: 9999;
 
-  width: 20.7%;
-  height: 68.5%;
+  width: 21.5%;
+  height: 68.9%;
 
   background-color: rgb(0, 0, 0);
   border-radius: 3px;
@@ -314,7 +314,7 @@ p {
 .services-skills {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 29px;
+  margin-bottom: 27px;
 }
 
 .services-skills-item {
@@ -322,7 +322,7 @@ p {
   align-items: flex-start;
   width: 300px;
   margin-right: 20px;
-  margin-bottom: 23px;
+  margin-bottom: 24px;
   overflow: hidden;
 }
 
@@ -332,12 +332,8 @@ p {
 }
 
 .icon-skill {
+  margin-top: 1px;
   margin-right: 20px;
-}
-
-.services-skills-item:nth-child(1) .icon-skill,
-.services-skills-item:nth-child(4) .icon-skill {
-  margin-left: 1px;
 }
 
 .item-title {
@@ -346,11 +342,6 @@ p {
   font-weight: 900;
   font-size: 18px;
   color: #666d89;
-}
-
-.services-skills-item:nth-child(3) .item-title,
-.services-skills-item:nth-child(6) .item-title {
-  margin-left: 2px;
 }
 
 .item-description {
@@ -395,8 +386,8 @@ p {
 }
 
 .portfolio-buttons {
-  margin-top: 15px;
-  margin-bottom: 9px;
+  margin-top: 16px;
+  margin-bottom: 8px;
   margin-left: 11px;
 }
 
@@ -423,7 +414,6 @@ p {
   color: #dedede;
 
   border-color: #dedede;
-  transform: scale(1.1, 1.1);
 }
 
 .btn:hover {
@@ -436,7 +426,7 @@ p {
   display: flex;
   flex-wrap: wrap;
   max-height: 625px;
-  margin-bottom: 57px;
+  margin-bottom: 58px;
   overflow: hidden;
 }
 
@@ -481,7 +471,7 @@ p {
 
 .portfolio-image-active {
   outline: 5px solid #f06c64;
-
+  outline-offset: -4px;
   transition: outline 0.3s, transform 0.3s linear;
 }
 
@@ -514,7 +504,7 @@ p {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-top: 44px;
+  margin-top: 43px;
   margin-bottom: 64px;
 }
 
@@ -522,11 +512,18 @@ p {
   max-width: 32%;
 }
 
+.employees-item:first-child {
+  margin-right: 1px;
+}
+
+.employees-item:last-child {
+  margin-right: -1px;
+}
+
 .employees-item img {
   max-width: 100%;
   height: auto;
 }
-
 
 .employees-name {
   max-height: 22px;
@@ -549,7 +546,6 @@ p {
 
 .social-networks {
   margin-top: 23px;
-  margin-left: 1px;
 }
 
 .social-networks > a {
@@ -561,10 +557,6 @@ p {
   background-repeat: no-repeat;
 
   transition: transform 0.1s linear;
-}
-
-.employees-item:nth-child(3) a:first-child {
-  margin-left: -1px;
 }
 
 .social-networks > a:hover {
@@ -625,11 +617,11 @@ form {
 input,
 textarea {
   width: 100%;
-  max-width: 100%;
+  max-width: 620px;
   height: 38px;
   margin-bottom: 16px;
-  padding-bottom: 3px;
   padding-left: 15px;
+  padding-top: 2px;
 
   color: #f0d8d9;
 
@@ -641,13 +633,12 @@ textarea {
 textarea {
   height: 159px;
   margin-bottom: 11px;
-  padding-top: 10px;
+  padding-top: 8px;
 
   letter-spacing: -0.01rem;
 
   resize: none;
 }
-
 
 input::placeholder,
 textarea::placeholder,
@@ -657,7 +648,7 @@ input:last-child::placeholder {
   color: #f48c8f;
 }
 
-.contacts-button {
+ .contacts-button {
   display: block;
   width: 136px;
   height: 38px;
@@ -688,10 +679,8 @@ input:last-child::placeholder {
 }
 
 .contact-information {
-  max-width: 31.5%;
+  max-width: 32%;
   margin-top: 32px;
-  margin-left: 20px;
-
   font-size: 12px;
   line-height: 22px;
   text-align: justify;
@@ -716,6 +705,7 @@ input:last-child::placeholder {
   display: block;
   margin: 0;
   margin-left: 24px;
+  margin-bottom: 1px;
 
   color: inherit;
   text-decoration: none;
@@ -753,7 +743,7 @@ input:last-child::placeholder {
 .email::before {
   content: url("assets/images/icon/email.svg");
   position: absolute;
-  bottom: -2px;
+  bottom: -1px;
   left: -23px;
 }
 
@@ -774,10 +764,11 @@ input:last-child::placeholder {
 }
 
 #modal-btn {
+  position: absolute;
   width: 40%;
-  margin: 45% auto 0 auto;
   padding: 5px 20px;
-
+left: 30%;
+bottom: 5%;
   font-size: 13px;
   font-family: inherit;
   vertical-align: middle;
@@ -802,13 +793,14 @@ input:last-child::placeholder {
 }
 
 .message {
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 100%;
   max-width: 500px;
   height: 100%;
   max-height: 400px;
-  margin: 25% auto;
+  margin: 15% auto;
   padding: 10px;
 
   font-size: 15px;
@@ -828,7 +820,7 @@ input:last-child::placeholder {
 }
 
 #subject-message {
-  max-height: 60px;
+  max-height: 56px;
   margin-bottom: 7px;
   padding-bottom: 5px;
   overflow: hidden;
@@ -839,7 +831,6 @@ input:last-child::placeholder {
 }
 
 #description-message {
-  max-height: 240px;
   margin-bottom: 7px;
   padding-bottom: 5px;
   overflow: hidden;
@@ -869,6 +860,10 @@ input:last-child::placeholder {
   font-weight: 900;
   font-size: 13px;
   color: #666d89;
+}
+
+.social-link {
+  margin-right: 2px;
 }
 
 .social-link > a {
@@ -1053,18 +1048,22 @@ input:last-child::placeholder {
     border-color: #f2f2f2;
   }
 
+  .services-wrapper {
+    padding: 0 41px;
+  }
+
   .services-description {
     margin-bottom: 34px;
   }
 
   .services-skills-item {
     width: 44%;
-    margin-right: 53px;
+    margin-right: 51px;
     margin-bottom: 43px;
   }
 
   .services-skills-item:nth-child(3) {
-    margin-right: 53px;
+    margin-right: 51px;
   }
 
   .services-skills-item:nth-child(2),
@@ -1073,16 +1072,30 @@ input:last-child::placeholder {
     margin-right: 0;
   }
 
+  .services-skills-item:nth-child(n + 3) .icon-skill {
+    margin-top: 4px;
+  }
+
+  .icon-skill {
+    margin-right: 20px;
+    margin-top: 2px;
+  }
+
+  .item-description {
+    line-height: 22px;
+  }
+
   .services-skills {
     margin-bottom: 20px;
   }
+
 
   .portfolio-description {
     line-height: 27px;;
   }
 
   .portfolio-buttons {
-    margin-bottom: 17.5px;
+    margin-bottom: 17.4px;
   }
 
   .portfolio-image-item::before {
@@ -1091,6 +1104,7 @@ input:last-child::placeholder {
 
   .portfolio-images {
     max-height: 100%;
+    margin-bottom: 56px;
   }
 
   .portfolio-image-item {
@@ -1112,18 +1126,31 @@ input:last-child::placeholder {
     margin-top: 38px;
   }
 
+  .employees-item {
+    max-width: 31.9%;
+  }
+
+  .employees-item:first-child {
+    margin-left: 2px;
+
+  }
+
+  .employees-item:last-child {
+    margin-left: 1px;
+    margin-right: 0;
+  }
+
   .employees-name {
     margin-top: 7px;
     margin-bottom: 1px;
   }
 
   .social-networks {
-    margin-top: 12px;
-    margin-left: 2px;
+    margin-top: 13px;
   }
 
   .contacts {
-    padding-top: 52px;
+    padding-top: 53px;
   }
 
   .contacts-description {
@@ -1131,11 +1158,12 @@ input:last-child::placeholder {
   }
 
   form {
-    margin: 14px 0 0 0;
+    margin: 13px 0 0 0;
   }
 
-  input,
+  input:not(.contacts-button),
   textarea {
+    min-width: 442px;
     margin-bottom: 12px;
     padding-bottom: 1px;
     padding-left: 9px;
@@ -1149,7 +1177,7 @@ input:last-child::placeholder {
 
   .contact-information {
     margin-top: 13px;
-    margin-left: 30px;
+    margin-left: 28px;
   }
 
   .contact-information-title {
@@ -1209,7 +1237,7 @@ input:last-child::placeholder {
 
     background-color: #2d303a;
     box-shadow: 0 -40px 20px rgba(0, 0, 0, 0.4);
-    transform: translateY(-100%);
+    transform: translateY(-120%);
 
     transition: transform 1s ease;
   }
@@ -1340,7 +1368,7 @@ input:last-child::placeholder {
   }
 
   .portfolio-images {
-    margin-bottom: 28px;
+    margin-bottom: 29px;
   }
 
   .portfolio-title {
@@ -1376,7 +1404,7 @@ input:last-child::placeholder {
   .employees {
     justify-content: center;
     margin-top: 24px;
-    margin-bottom: 35px;
+    margin-bottom: 33px;
   }
 
   .employees-item img {
@@ -1389,6 +1417,8 @@ input:last-child::placeholder {
     width: 100%;
     max-width: 100%;
     margin-bottom: 31px;
+    min-width: 314px;
+    min-height: 440px;
   }
 
   .employees-item:last-child {
@@ -1396,7 +1426,7 @@ input:last-child::placeholder {
   }
 
   .employees-name {
-    margin-top: 12px;
+    margin-top: 13px;
   }
 
   .social-networks {
@@ -1416,6 +1446,11 @@ input:last-child::placeholder {
     padding: 0 30px;
   }
 
+  input:not(.contacts-button),
+  textarea {
+    min-width: 100%;
+  }
+
   .contacts-button {
     width: 100%;
     height: 50px;
@@ -1425,7 +1460,7 @@ input:last-child::placeholder {
 
   .contact-information {
     max-width: 100%;
-    margin-bottom: 38px;
+    margin-bottom: 36px;
     margin-left: 0;
   }
 
@@ -1438,7 +1473,7 @@ input:last-child::placeholder {
   }
 
   form {
-    margin: 25px 0 0 0;
+    margin: 23px 0 0 0;
   }
 
   .contact-information {
@@ -1447,7 +1482,7 @@ input:last-child::placeholder {
   }
 
   .comminication-link {
-    margin-top: 2px;
+    margin-top: 3px;
   }
 
   .footer-content {
@@ -1461,32 +1496,37 @@ input:last-child::placeholder {
 
 @media (max-width: 374px) {
   .display-right {
-    min-width: none;
-    min-height: none;
+    min-width: 0px;
+    min-height: 0px;
   }
 
   .display-left {
-    min-width: none;
-    min-height: none;
+    min-width: 0px;
+    min-height: 0px;
   }
 
   .phone-vertical {
-    min-width: none;
-    min-height: none;
+    min-width: 0px;
+    min-height: 0px;
   }
 
   .phone-horizontal {
-    min-width: none;
-    min-height: none;
+    min-width: 0px;
+    min-height: 0px;
   }
 
   .shadow-vertical {
-    min-width: none;
-    min-height: none;
+    min-width: 0px;
+    min-height: 0px;
   }
 
   .shadow-horizontal {
-    min-width: none;
-    min-height: none;
+    min-width: 0px;
+    min-height: 0px;
+  }
+
+  .employees-item {
+    min-width: 0px;
+    min-height: 0px;
   }
 }
