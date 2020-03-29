@@ -1,7 +1,7 @@
 body {
   margin: 0 auto 0;
 
-  font-size: 12px;
+
   font-family: "Lato", "Arial", sans-serif;
   color: #797f97;
 
@@ -87,7 +87,7 @@ p {
 
 .title-menu {
   position: absolute;
-  left: 71px;
+  left: 60px;
   z-index: 9999;
 
   margin-top: 4px;
@@ -1317,6 +1317,7 @@ bottom: 5%;
   }
 
   .display-left {
+    top: 12.3%;
     min-width: 69.12px;
     min-height: 122.43px;
   }
